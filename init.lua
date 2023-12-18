@@ -1,1 +1,1 @@
-require("core.plugins")
+require("core.init")
