@@ -13,11 +13,17 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+	--THEMES--
 	use {
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {},
+	}
+	--TELESCOPE--
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
+		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
   if packer_bootstrap then
