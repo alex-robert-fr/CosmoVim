@@ -25,6 +25,22 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	-- COC --
+	use { 'neoclide/coc.nvim', branch='release' }
+	-- SURROUND --
+	use {
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function()
+        require("nvim-surround").setup({})
+    end
+	}
+	-- MARKDOWN PREVIEW
+	use {'iamcco/markdown-preview.nvim'}
+	-- Mason
+	use {
+    "williamboman/mason.nvim"
+	}
 
   if packer_bootstrap then
     require('packer').sync()
