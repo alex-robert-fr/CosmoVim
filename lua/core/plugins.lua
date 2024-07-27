@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
 	use {'iamcco/markdown-preview.nvim'}
 	-- Mason
 	use {
-    "williamboman/mason.nvim"
+			"neovim/nvim-lspconfig",
 	}
 
   if packer_bootstrap then
